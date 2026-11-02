@@ -1,0 +1,9 @@
+{
+  "policy": {"max_changes": 5, "objects": {"Lead": {
+    "Status": {"type": "string", "enum": ["Open", "Working", "Qualified"]},
+    "Score__c": {"type": "integer", "minimum": 0, "maximum": 100}
+  }}},
+  "snapshot": [{"object": "Lead", "record_id": "demo-lead-001", "values": {"Status": "Open", "Score__c": 20}}],
+  "proposal": {"request_id": "demo-review-001", "changes": [{"object": "Lead", "record_id": "demo-lead-001",
+    "expected": {"Status": "Open", "Score__c": 20}, "updates": {"Status": "Working", "Score__c": 65}}]}
+}
